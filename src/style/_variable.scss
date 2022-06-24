@@ -1,0 +1,38 @@
+/*Primary color*/
+
+$Gray: hsl(0, 0%, 95%);
+$GrayishViolet: hsl(257, 7%, 63%);
+$VeryDarkBlue: hsl(255, 11%, 22%);
+$VeryDarkViolet: hsl(260, 8%, 14%);
+$DarkViolet: hsl(257, 27%, 26%);
+$Cyan: hsl(180, 66%, 49%);
+$Red: hsl(0, 87%, 67%);
+
+$large_screen: 900px;
+
+$medium_screen: 650px;
+
+$medium_screenl: 1200px;
+$Smallest: 750px;
+@mixin Special {
+  @media (max-width: $medium_screenl) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: $large_screen) {
+    @content;
+  }
+}
+@mixin medium {
+  @media (min-width: $medium_screen) {
+    @content;
+  }
+}
+
+@mixin lmedium {
+  @media (min-width: $medium_screenl) {
+    @content;
+  }
+}
